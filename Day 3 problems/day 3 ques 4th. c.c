@@ -8,13 +8,19 @@ int main()
 	printf("Input number of terms : ");
 	scanf("%d",&n);
 
-	for (i=1 ; i<n;i++)
+	for (i=1 ; i<n ; i++)
 	{
-	  temp=temp*x/(float)i;
-	  sum =sum+temp;
+
+	    temp=temp*x/(float)i;
+	    if(i%2==0)
+	      { sum =sum-temp;  }
+	    else
+        {
+            sum=sum+temp;
+        }
 	}
 	printf("\nThe sum  is : %f\n",sum);
 
     return 0;
-}
 
+}
